@@ -1,0 +1,34 @@
+<h1>Trang Dang ky</h1>
+<form [formGroup]="registerFrom" (ngSubmit)="onSubmit()" class="style">
+  <mat-form-field appearance="fill">
+    <mat-label>user name</mat-label>
+    <input matInput formControlName="taiKhoan"/>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>pass word</mat-label>
+    <input matInput formControlName="matKhau"/>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>email</mat-label>
+    <input matInput formControlName="email"/>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>sdt</mat-label>
+    <input matInput formControlName="soDt"/>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>loai nguoi dung</mat-label>
+    <input matInput formControlName="maLoaiNguoiDung"/>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>ho ten</mat-label>
+    <input matInput formControlName="hoTen"/>
+  </mat-form-field>
+
+  <button type="submit" mat-raised-button color="primary">Dang Nhap</button>
+</form>

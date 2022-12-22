@@ -1,0 +1,47 @@
+<h1>Them Phim</h1>
+<lib-toastify-toast-container></lib-toastify-toast-container>
+<div>
+  <form action="" class="style" [formGroup]="phimForm" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="fill">
+      <mat-label>maphim</mat-label>
+      <input matInput formControlName="maPhim" />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>tenPhim</mat-label>
+      <input matInput formControlName="tenPhim" />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>biDanh</mat-label>
+      <input matInput formControlName="biDanh" />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>trailer</mat-label>
+      <input matInput formControlName="trailer" />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>hinhAnh</mat-label>
+      <input matInput formControlName="hinhAnh" />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>moTa</mat-label>
+      <input matInput formControlName="moTa" />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>MaNhom</mat-label>
+      <mat-select formControlName="maNhom">
+        <mat-option value="GP03">GP03</mat-option>
+        <mat-option value="Gp04">Gp04</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>ngayKhoiChieu</mat-label>
+      <input matInput formControlName="ngayKhoiChieu" />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>danhGia</mat-label>
+      <input matInput formControlName="danhGia" />
+    </mat-form-field>
+
+     <button mat-raised-button color="primary" type="submit">Them Phim</button>
+  </form>
+</div>

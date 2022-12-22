@@ -1,0 +1,15 @@
+<h1>Trang dang nhap</h1>
+<lib-toastify-toast-container ></lib-toastify-toast-container>
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="style">
+  <mat-form-field appearance="fill">
+    <mat-label>user name</mat-label>
+    <input matInput formControlName="taiKhoan"/>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>pass word</mat-label>
+    <input matInput formControlName="matKhau"/>
+  </mat-form-field>
+
+  <button type="submit" mat-raised-button color="primary">Dang Nhap</button>
+</form>

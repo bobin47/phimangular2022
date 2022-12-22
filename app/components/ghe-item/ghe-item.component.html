@@ -1,0 +1,15 @@
+<ng-container *ngIf="!ghe.daDat; else gheDaDcChon">
+  <!-- <button type="button" class="btn btn-success m-1">{{ghe.tenGhe}}</button> -->
+  <button mat-raised-button color={{styleBtn}}  (click)="datghe()" >
+    {{ ghe.tenGhe }}
+  </button>
+  
+</ng-container>
+
+<ng-template #gheDaDcChon>
+  <button mat-raised-button  disabled="">
+    {{ ghe.tenGhe }}
+  </button>
+</ng-template>
+
+<!-- color="{{static ? "primary":"accent"}}"  -->

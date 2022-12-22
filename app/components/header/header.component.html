@@ -1,0 +1,47 @@
+<mat-toolbar color="primary">
+  <span class="ml">My App</span>
+  <button mat-button class="ml" routerLink="/home">Home</button>
+  <button mat-button class="ml" routerLink="/dangky">Register</button>
+  <ng-template #admin>
+    <button mat-button class="ml" routerLink="/admin">Manager</button>
+  </ng-template>
+  <button mat-button class="ml">Contact</button>
+  <span class="example-spacer"></span>
+  <ng-container *ngIf="user; then icon; else login"> </ng-container>
+
+  <ng-template #login>
+    <button mat-button class="ml" routerLink="/dangnhap">Login</button>
+  </ng-template>
+
+  <ng-template #icon>
+    <ng-container
+      *ngIf="maNguoiDung == nguoidung; then null; else admin"
+    ></ng-container>
+
+    <button
+      mat-icon-button
+      [matMenuTriggerFor]="menu"
+      aria-label="Example icon-button with a menu"
+    >
+      <mat-icon>account_circle</mat-icon>
+    </button>
+
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item routerLink="/trangcanhan">
+        <mat-icon>perm_device_information</mat-icon>
+        <span>Information</span>
+      </button>
+
+      <button mat-menu-item (click)="dangXuat()">
+        <mat-icon>exit_to_app</mat-icon>
+        <span>Logout</span>
+      </button>
+    </mat-menu>
+  </ng-template>
+</mat-toolbar>
+<!--  -->
+<!-- <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>Shiba Inu</mat-card-title>
+    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+  </mat-card-header> -->

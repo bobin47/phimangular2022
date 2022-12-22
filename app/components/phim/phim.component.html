@@ -1,0 +1,18 @@
+
+    <mat-card class="example-card">
+      <img
+        mat-card-image
+        src={{phim.hinhAnh}}
+        alt="Photo of a Shiba Inu"
+      />
+      <mat-card-content>
+        <h3> {{phim.tenPhim}}</h3>
+        <p>
+        {{phim.moTa}}
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="primary" routerLink="/chitiet/{{phim.maPhim}}">Chi tiet</button>
+      </mat-card-actions>
+    </mat-card>
+

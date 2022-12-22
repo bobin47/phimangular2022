@@ -1,0 +1,9 @@
+<h1 style="text-align: center">Danh Sach Phim</h1>
+<lib-toastify-toast-container ></lib-toastify-toast-container>
+
+<mat-grid-list cols="3" rowHeight="500">
+  <mat-grid-tile *ngFor="let phim of danhSachPhim | slice : 0 : 15">
+    <app-phim [phim]="phim"></app-phim>
+  </mat-grid-tile>
+</mat-grid-list>
+

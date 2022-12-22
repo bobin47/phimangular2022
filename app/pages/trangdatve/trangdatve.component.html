@@ -1,0 +1,73 @@
+<!-- <h1 style="text-align: center">trang dat ve xem phim</h1>
+
+<mat-grid-list cols="4" rowHeight="100px">
+  <mat-grid-tile
+    [colspan]="3"
+    [rowspan]="6"
+    [style.background]="'lightblue'"
+    class="style"
+  >
+    <div class="row">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <app-ghe-item
+              *ngFor="let ghe of danhSachGhe | slice : 0 : 60"
+              [ghe]="ghe"
+            ></app-ghe-item>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-grid-tile>
+
+  <mat-grid-tile [colspan]="1" [rowspan]="6" [style.background]="'lightgreen'">
+    <div class="card text-left">
+      <div class="card-body">
+        <h1 class="display-4 text-center">Hiển Thị Thông Tin Ghế</h1>
+
+        <p>Số ghế đã đặt: {{ soGheDaDat }}</p>
+        <p>Số ghế còn lại: {{ soGheConLai }}</p>
+
+        <h2>ghế bạn đang đặt</h2>
+        <p *ngFor="let ghe of danhSachGheDangDat">
+          tên ghế: <span> {{ ghe.tenGhe }} </span> giá vé:
+          <span> {{ ghe.giaVe }} </span>
+        </p>
+      </div>
+      <button class="btn btn-info m-3" (click)="datVe()">Đặt vé</button>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list> -->
+<lib-toastify-toast-container ></lib-toastify-toast-container>
+
+<div class="row">
+  <div class="bg-secondary p-4 col-8">
+    <h1 class="display-4 text-center text-white">Danh Sách Ghế Ngồi</h1>
+    <div class="container">
+      <div class="row datGhe">
+        <div class="col-1 mb-2" *ngFor="let ghe of danhSachGhe ">
+          <app-ghe-item [ghe]="ghe" (emit)="datgheOutput($event,ghe)"> </app-ghe-item>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-4">
+    <div class="card text-left">
+      <div class="card-body">
+        <h1 class="display-4 text-center">Hiển Thị Thông Tin Ghế</h1>
+
+        <p>Số ghế đã đặt: {{ soGheDaDat }}</p>
+        <p>Số ghế còn lại: {{ soGheConLai }}</p>
+
+        <h2>ghế bạn đang đặt</h2>
+        <p *ngFor="let ghe of danhSachGheDangDat">
+          tên ghế: <span> {{ ghe.tenGhe }} </span> giá vé:
+          <span> {{ ghe.giaVe }} </span>
+        </p>
+      </div>
+      <button class="btn btn-info m-3" (click)="datVe()">Đặt vé</button>
+    </div>
+  </div>
+</div>
